@@ -1,0 +1,62 @@
+/* Custom styling for the Bootstrap website. 
+These styles do not ship with Bootstrap. 
+*/
+footer {
+	text-align: center;
+	color: #999;
+	border-top: 1px solid #ccc;
+	padding: 2em 0em;
+	margin: 3em 0;
+}
+
+/* jumbotron styling */
+	@media screen and (min-width: @screen-sm-min){
+    .jumbotron h1,
+    .jumbotron .h1 {
+      font-size: ceil((@font-size-base * 3));
+    }
+  }
+
+  .jumbotron {
+  border: 1px solid @brand-secondary
+  }
+
+.panel {
+  margin-top: (@line-height-computed * 3.4);
+  margin-bottom: @line-height-computed;
+}
+
+
+/* buttons with mixins */
+
+.btn-secondary {
+	.button-variant(#fff; @brand-secondary; darken(@brand-secondary, 20%));
+	font-family: 'Shadows Into Light Two', cursive;
+}
+
+.btn-custom {
+
+.button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-large; @line-height-large; @border-radius-large); 
+}
+
+/* Tab styling */
+
+.tab-content {
+	border-left: 1px solid @nav-tabs-border-color;
+	border-right: 1px solid @nav-tabs-border-color;
+	border-bottom: 1px solid @nav-tabs-border-color;
+	.clearfix();
+	padding: 10px;
+
+	.pull-left {
+	padding: 0 10px 10px 0;
+	}
+
+	.pull-right {
+	padding: 0 0 10px 10px;
+	}
+}
+
+.extra-padding {
+	margin-top: 69px;
+}
